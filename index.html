@@ -1,0 +1,811 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aether - Air Pollution Observatory</title>
+    <meta name="description" content="A clean, minimal, and professional scientific observatory on air pollution, atmospheric particulate matter, global AQI indices, and health impacts." />
+    <meta property="og:title" content="Aether - Air Pollution Observatory" />
+    <meta property="og:description" content="A clean, minimal, and professional scientific observatory on air pollution, atmospheric particulate matter, global AQI indices, and health impacts." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Google Fonts Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <!-- Top Navigation Bar: Strict 3-Zone Contract -->
+    <header class="site-header">
+      <div class="container nav-container">
+        <!-- Zone 1: Single text element wordmark -->
+        <a href="/" class="nav-brand">
+          <span class="brand-dot"></span>
+          AETHER · AIR OBSERVATORY
+        </a>
+
+        <!-- Zone 2: 5 clean text navigation links -->
+        <nav>
+          <ul class="nav-links" id="navLinks">
+            <li><a href="#global-directory" class="nav-link">Global Directory</a></li>
+            <li><a href="#aqi-calculator" class="nav-link">AQI Calculator</a></li>
+            <li><a href="#particle-scale" class="nav-link">Particle Scale</a></li>
+            <li><a href="#pollutants" class="nav-link">Criteria Pollutants</a></li>
+            <li><a href="#inversion-sim" class="nav-link">Atmospheric Sim</a></li>
+            <li><a href="#health-impact" class="nav-link">Health Pathways</a></li>
+            <li><a href="#action-matrix" class="nav-link">Action Blueprint</a></li>
+          </ul>
+        </nav>
+
+        <!-- Zone 3: Operational Benchmark + Actions -->
+        <div class="nav-actions">
+          <div class="who-guideline-badge" title="WHO 2021 Annual PM2.5 Guideline Target">
+            <span>WHO Target:</span>
+            <strong>5 µg/m³</strong>
+          </div>
+          <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Toggle theme" title="Toggle light/dark theme">
+            <span id="themeIcon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+              </svg>
+            </span>
+          </button>
+          <button id="mobileNavToggle" class="mobile-nav-toggle" aria-label="Toggle mobile menu">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="container">
+          <div class="hero-grid">
+            <div>
+              <div class="hero-kicker">
+                <span>●</span> Global Environmental Health Assessment
+              </div>
+              <h1 class="hero-title">
+                The invisible burden shaping human <em>longevity & air</em>.
+              </h1>
+              <p class="hero-deck">
+                Over 99% of the global population breathes air exceeding World Health Organization guidelines. Examine the particulate physics, chemical precursors, trapped inversion layers, and anatomical consequences of atmospheric pollution.
+              </p>
+              <div class="hero-cta-group">
+                <a href="#aqi-calculator" class="btn-primary">
+                  Compute Exposure AQI
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                </a>
+                <a href="#inversion-sim" class="btn-secondary">
+                  Launch Inversion Sim
+                </a>
+              </div>
+            </div>
+
+            <!-- Hero Image Asset Slot -->
+            <div>
+              <div class="hero-media-wrapper">
+                <img 
+                  src="/src/assets/images/hero_atmospheric_smog_1790776051275.jpg" 
+                  alt="Metropolitan urban basin covered in atmospheric particulate haze at sunrise" 
+                  class="hero-img"
+                  referrerpolicy="no-referrer"
+                  loading="eager"
+                />
+              </div>
+              <div class="hero-caption">
+                <span>Fig. 1 — Metropolitan basin particulate optical depth during morning thermal stagnation</span>
+                <span class="tabular-nums">AOD: 0.84</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quantitative Rigor: Vital Telemetry Strip -->
+          <div class="vital-strip">
+            <div class="vital-item">
+              <div class="vital-value tabular-nums">8.1M<span class="unit">deaths / yr</span></div>
+              <div class="vital-label">Premature global mortality attributed to ambient & household particulate matter</div>
+            </div>
+            <div class="vital-item">
+              <div class="vital-value tabular-nums">99%<span class="unit">of humans</span></div>
+              <div class="vital-label">Population residing in regions exceeding WHO air safety recommendations</div>
+            </div>
+            <div class="vital-item">
+              <div class="vital-value tabular-nums">2.5<span class="unit">µm</span></div>
+              <div class="vital-label">Threshold particulate diameter capable of bypassing airway cilia to enter alveoli</div>
+            </div>
+            <div class="vital-item">
+              <div class="vital-value tabular-nums">-2.2<span class="unit">years</span></div>
+              <div class="vital-label">Average reduction in human life expectancy across high-smog continental corridors</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MODULE 0: Global Air Quality Directory: Countries, States & Cities -->
+      <section id="global-directory" class="section-padding" style="background-color: var(--bg-surface-subtle); border-bottom: 1px solid var(--border-hairline);">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">Global Monitoring Network</div>
+            <h2 class="section-title">AQI Directory: Countries, States & Cities</h2>
+            <p class="section-desc">
+              Comprehensive atmospheric telemetry across 60+ countries, hundreds of states and territories, and over 1,500 metropolitan stations. Search, filter, or sync live satellite and ground-sensor data.
+            </p>
+          </div>
+
+          <div class="global-directory-card">
+            <!-- Cascading Filters & Instant Search -->
+            <div class="directory-controls-row">
+              <!-- Search Box -->
+              <div class="control-field-group">
+                <label class="control-field-label" for="globalSearchInput">Instant Global City Search</label>
+                <div class="search-input-wrap">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  </svg>
+                  <input 
+                    type="text" 
+                    id="globalSearchInput" 
+                    class="geo-search-input" 
+                    placeholder="Search city, state, or country... e.g. Los Angeles, Delhi, Tokyo, Berlin" 
+                    autocomplete="off"
+                  />
+                  <!-- Suggestions dropdown -->
+                  <div class="search-results-dropdown" id="searchResultsDropdown"></div>
+                </div>
+              </div>
+
+              <!-- Country Select -->
+              <div class="control-field-group">
+                <label class="control-field-label" for="countrySelect">1. Select Country</label>
+                <select id="countrySelect" class="geo-select-input" aria-label="Select Country">
+                  <option value="">Loading countries...</option>
+                </select>
+              </div>
+
+              <!-- State Select -->
+              <div class="control-field-group">
+                <label class="control-field-label" for="stateSelect">2. State / Province / Territory</label>
+                <select id="stateSelect" class="geo-select-input" aria-label="Select State or Province">
+                  <option value="">Select country first</option>
+                </select>
+              </div>
+
+              <!-- City Select -->
+              <div class="control-field-group">
+                <label class="control-field-label" for="citySelect">3. Metropolitan Station</label>
+                <select id="citySelect" class="geo-select-input" aria-label="Select City">
+                  <option value="">Select state first</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- City Dossier Display Card -->
+            <div class="dossier-layout">
+              <!-- Left: Core Telemetry & Status -->
+              <div>
+                <div class="dossier-header-bar">
+                  <div>
+                    <h3 class="dossier-city-name" id="dossierCityName">Los Angeles</h3>
+                    <div class="dossier-region-meta" id="dossierRegionMeta">California · United States (USA)</div>
+                  </div>
+                  <button id="fetchLiveTelemetryBtn" class="btn-fetch-live" title="Sync with Open-Meteo & Copernicus Satellite API">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/>
+                    </svg>
+                    Sync Live Telemetry
+                  </button>
+                </div>
+
+                <!-- AQI Banner -->
+                <div class="dossier-aqi-highlight" id="dossierAqiBanner">
+                  <div class="dossier-aqi-big tabular-nums" id="dossierAqiBig">68</div>
+                  <div>
+                    <div class="dossier-aqi-status" id="dossierAqiStatus">Moderate</div>
+                    <div style="font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono);">
+                      Primary Risk Driver: <strong id="dossierPrimaryDriver" style="color: var(--text-primary);">O3 & PM2.5</strong>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Multi-pollutant Breakdown Grid -->
+                <div class="dossier-pollutant-grid">
+                  <div class="pollutant-metric-tile">
+                    <span class="tile-label">PM2.5</span>
+                    <span class="tile-value tabular-nums" id="dossierPm25Val">20.4</span>
+                    <span class="tile-unit">µg/m³</span>
+                  </div>
+                  <div class="pollutant-metric-tile">
+                    <span class="tile-label">PM10</span>
+                    <span class="tile-value tabular-nums" id="dossierPm10Val">38.2</span>
+                    <span class="tile-unit">µg/m³</span>
+                  </div>
+                  <div class="pollutant-metric-tile">
+                    <span class="tile-label">NO2</span>
+                    <span class="tile-value tabular-nums" id="dossierNo2Val">32.5</span>
+                    <span class="tile-unit">µg/m³</span>
+                  </div>
+                  <div class="pollutant-metric-tile">
+                    <span class="tile-label">O3</span>
+                    <span class="tile-value tabular-nums" id="dossierO3Val">45.2</span>
+                    <span class="tile-unit">µg/m³</span>
+                  </div>
+                  <div class="pollutant-metric-tile">
+                    <span class="tile-label">SO2</span>
+                    <span class="tile-value tabular-nums" id="dossierSo2Val">1.8</span>
+                    <span class="tile-unit">µg/m³</span>
+                  </div>
+                  <div class="pollutant-metric-tile">
+                    <span class="tile-label">CO</span>
+                    <span class="tile-value tabular-nums" id="dossierCoVal">0.6</span>
+                    <span class="tile-unit">mg/m³</span>
+                  </div>
+                  <div class="pollutant-metric-tile">
+                    <span class="tile-label">WHO Multiple</span>
+                    <span class="tile-value tabular-nums" id="dossierWhoRatio">4.1×</span>
+                    <span class="tile-unit">vs 5 µg/m³ limit</span>
+                  </div>
+                  <div class="pollutant-metric-tile">
+                    <span class="tile-label">Cigarette Equiv</span>
+                    <span class="tile-value tabular-nums" id="dossierCigEquiv">0.9/day</span>
+                    <span class="tile-unit">passive equivalent</span>
+                  </div>
+                </div>
+
+                <div class="sim-notes-card">
+                  <strong style="color: var(--text-primary); display: block; margin-bottom: 0.25rem;">Local Atmospheric Microclimate & Sources:</strong>
+                  <span id="dossierMicroclimateText">Trapped coastal basin; photochemical ozone production combined with heavy diesel freight traffic from Port of LA.</span>
+                </div>
+              </div>
+
+              <!-- Right: 24-Hour Diurnal Trend Sparkline -->
+              <div class="sparkline-container">
+                <div class="sparkline-header">
+                  <span style="font-weight: 600; text-transform: uppercase; color: var(--text-primary);">24-Hour Diurnal AQI Trajectory</span>
+                  <span style="color: var(--text-muted);">Diurnal Cycle Simulation</span>
+                </div>
+                <canvas id="cityTrendCanvas"></canvas>
+                <div class="telemetry-meta-row">
+                  <span id="dossierLiveTimestamp">Calibrated ground station baseline · Continuous sampling</span>
+                  <span style="color: var(--accent-primary); font-weight: 500;">Hourly Granularity</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Global Rankings Table -->
+            <div class="rankings-section">
+              <div class="rankings-filter-bar">
+                <div>
+                  <h4 style="font-size: 1rem; font-weight: 600;">Metropolitan Air Quality Directory & Rankings</h4>
+                  <p style="font-size: 0.75rem; color: var(--text-muted);">Click any row to load atmospheric metrics and microclimate diagnostics</p>
+                </div>
+                <div class="rankings-region-tabs">
+                  <button class="rank-tab-btn active" data-region="all">All Cities</button>
+                  <button class="rank-tab-btn" data-region="most_polluted">Highest AQI</button>
+                  <button class="rank-tab-btn" data-region="cleanest">Cleanest Air</button>
+                  <button class="rank-tab-btn" data-region="americas">Americas</button>
+                  <button class="rank-tab-btn" data-region="europe">Europe</button>
+                  <button class="rank-tab-btn" data-region="asia">Asia</button>
+                  <button class="rank-tab-btn" data-region="middleeast">Middle East</button>
+                  <button class="rank-tab-btn" data-region="africa">Africa</button>
+                  <button class="rank-tab-btn" data-region="oceania">Oceania</button>
+                </div>
+              </div>
+
+              <div class="table-responsive-container">
+                <table class="rankings-table">
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>City / Station</th>
+                      <th>State / Region</th>
+                      <th>Country</th>
+                      <th>AQI (US-EPA)</th>
+                      <th>PM2.5 Conc.</th>
+                      <th>Category</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody id="rankingsTableBody">
+                    <!-- Populated dynamically via script.js -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MODULE 1: Live Interactive AQI & Exposure Impact Calculator -->
+      <section id="aqi-calculator" class="section-padding">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">Interactive Model</div>
+            <h2 class="section-title">Ambient Air Quality Index & Exposure Calculator</h2>
+            <p class="section-desc">
+              Calculate standard US EPA Air Quality Index categories and public health exposure risks based on real-time PM2.5 concentrations or global city benchmarks.
+            </p>
+          </div>
+
+          <div class="aqi-calculator-card">
+            <div class="calc-grid">
+              <!-- Left: Controls -->
+              <div class="calc-control-group">
+                <div>
+                  <label class="slider-label-row" style="margin-bottom: 0.5rem; font-weight: 600;">
+                    <span>City Reference Scenarios:</span>
+                  </label>
+                  <div class="city-presets-bar" id="cityPresetsContainer">
+                    <!-- Injected via script.js -->
+                  </div>
+                </div>
+
+                <div class="slider-container">
+                  <div class="slider-label-row">
+                    <span style="font-weight: 600;">Fine Particulate (PM2.5) Concentration:</span>
+                    <span id="pm25ValueReadout" class="tabular-nums" style="font-weight: 700; color: var(--accent-primary);">45.0 µg/m³</span>
+                  </div>
+                  <input 
+                    type="range" 
+                    id="pm25Slider" 
+                    class="slider-input" 
+                    min="1" 
+                    max="350" 
+                    step="0.5" 
+                    value="45"
+                    aria-label="Fine Particulate PM2.5 Concentration slider"
+                  />
+                  <div class="slider-label-row" style="font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono);">
+                    <span>0 (WHO Clean Baseline)</span>
+                    <span>150 (Unhealthy)</span>
+                    <span>350+ (Hazardous)</span>
+                  </div>
+                </div>
+
+                <div class="sim-notes-card" id="presetNoteText">
+                  Measured ambient concentration: 45 µg/m³ PM2.5 particulate suspension.
+                </div>
+              </div>
+
+              <!-- Right: Scientific Readout Panel -->
+              <div class="calc-readout-panel">
+                <div class="aqi-status-banner" id="aqiStatusBanner">
+                  <div class="aqi-score-box">
+                    <div class="aqi-score-num tabular-nums" id="aqiScoreNumber">124</div>
+                    <div>
+                      <div class="aqi-category-title" id="aqiCategoryText">Unhealthy for Sensitive Groups</div>
+                      <div style="font-size: 0.75rem; font-family: var(--font-mono); color: var(--text-muted);">US-EPA Standard Air Quality Index</div>
+                    </div>
+                  </div>
+                  <p class="aqi-advisory-prose" id="aqiAdvisoryText">
+                    Children, older adults, and individuals with cardiovascular or respiratory disease should reduce prolonged outdoor exertion.
+                  </p>
+                </div>
+
+                <!-- Exposure Metrics Grid -->
+                <div class="exposure-metrics-grid">
+                  <div class="exposure-metric-card">
+                    <div class="label">WHO Safety Guideline Ratio</div>
+                    <div class="val tabular-nums" id="whoRatioValue">9.0×</div>
+                    <div class="desc">Above annual clean air guideline of 5 µg/m³</div>
+                  </div>
+                  <div class="exposure-metric-card">
+                    <div class="label">Cigarette Equivalence</div>
+                    <div class="val tabular-nums" id="cigEquivValue">2.0</div>
+                    <div class="desc">Passive cigarettes inhaled / 24-hr day (Berkeley Earth model)</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="hairline-divider" />
+
+      <!-- MODULE 2: Particulate Size Spectrum & Biological Penetration Visualizer -->
+      <section id="particle-scale" class="section-padding">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">Microscopic Physics</div>
+            <h2 class="section-title">The Particulate Size Spectrum</h2>
+            <p class="section-desc">
+              Particle toxicity is governed by aerodynamic diameter. Compare microscopic scales to understand which particles are halted by anatomical mucosal filters versus those that penetrate alveolar capillary tissue.
+            </p>
+          </div>
+
+          <div class="spectrum-box">
+            <!-- Tabs -->
+            <div class="spectrum-nav-tabs" id="spectrumTabsContainer">
+              <!-- Injected by script.js -->
+            </div>
+
+            <div class="spectrum-display-grid">
+              <!-- Visual stage -->
+              <div class="spectrum-canvas-stage">
+                <div class="canvas-particle-target" id="particleVisualTarget"></div>
+                <div class="hero-caption" style="margin-top: 1.5rem;" id="particleVisualScaleLabel">
+                  Magnified Visual Comparison Scale · Proportional Diameter
+                </div>
+              </div>
+
+              <!-- Particle Info details -->
+              <div class="spectrum-info-details">
+                <div>
+                  <div style="font-size: 0.75rem; font-family: var(--font-mono); text-transform: uppercase; color: var(--text-muted);" id="spectrumParticleCategory">Combustion Soot & Aerosols</div>
+                  <h3 style="font-size: 1.5rem; font-weight: 600; margin: 0.25rem 0;" id="spectrumParticleName">Fine Particulate (PM2.5)</h3>
+                  <div class="spectrum-size-badge" id="spectrumParticleSize">≤ 2.5 µm <span>(2.5 microns)</span></div>
+                </div>
+
+                <div class="penetration-barrier-card">
+                  <h4>Biological Filtration & Tissue Fate</h4>
+                  <p id="spectrumBarrierNote">
+                    Respirable deep into terminal alveolar sacs. Bypasses ciliated airways; induces chronic pulmonary macrophages and systemic inflammation.
+                  </p>
+                </div>
+
+                <div style="border-top: 1px solid var(--border-hairline); padding-top: 1rem; display: flex; align-items: center; gap: 1rem;">
+                  <img 
+                    src="/src/assets/images/particulate_microscopic_1790776064708.jpg" 
+                    alt="Scanning electron micrograph of PM2.5 soot aggregates" 
+                    style="width: 72px; height: 54px; object-fit: cover; border-radius: var(--radius-sm); border: 1px solid var(--border-hairline);"
+                    referrerpolicy="no-referrer"
+                  />
+                  <div style="font-size: 0.75rem; color: var(--text-muted); line-height: 1.4;">
+                    <strong style="color: var(--text-primary); display: block;">SEM Micrograph Analysis</strong>
+                    Soot agglomerates feature high specific surface area, adsorbing carcinogenic polycyclic aromatic hydrocarbons (PAHs).
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="hairline-divider" />
+
+      <!-- MODULE 3: Criteria Air Pollutants Matrix -->
+      <section id="pollutants" class="section-padding">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">Chemical Taxonomy</div>
+            <h2 class="section-title">The Six Criteria Air Pollutants</h2>
+            <p class="section-desc">
+              Regulated internationally by environmental health authorities under strict ambient limits. Select any criteria pollutant to view its atmospheric chemistry, formation vectors, and clinical thresholds.
+            </p>
+          </div>
+
+          <!-- Filter buttons -->
+          <div class="pollutant-filter-controls">
+            <button class="filter-btn active" data-filter="all">All Pollutants</button>
+            <button class="filter-btn" data-filter="combustion">Combustion & Exhaust</button>
+            <button class="filter-btn" data-filter="secondary">Secondary Photochemical</button>
+            <button class="filter-btn" data-filter="industrial">Heavy Industry</button>
+          </div>
+
+          <!-- Cards Grid -->
+          <div class="pollutants-grid" id="pollutantsGrid">
+            <!-- Dynamically populated by script.js -->
+          </div>
+        </div>
+      </section>
+
+      <hr class="hairline-divider" />
+
+      <!-- MODULE 4: Thermal Inversion & Atmospheric Smog Physics Simulator -->
+      <section id="inversion-sim" class="section-padding">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">Atmospheric Dynamics</div>
+            <h2 class="section-title">Thermal Inversion & Smog Trapping Simulation</h2>
+            <p class="section-desc">
+              Under normal lapse conditions, warm surface air rises and carries pollutants into upper atmospheric layers. During nocturnal radiation cooling or winter high-pressure systems, a warm cap forms above the ground, creating a thermal inversion that seals smog tightly inside valleys and urban basins.
+            </p>
+          </div>
+
+          <div class="simulator-card">
+            <div class="sim-layout">
+              <!-- Canvas view -->
+              <div class="sim-canvas-container">
+                <canvas id="inversionCanvas"></canvas>
+                <div class="sim-overlay-legend">
+                  <span id="simLegendState">Trapped Thermal Inversion (Severe Smog)</span>
+                </div>
+              </div>
+
+              <!-- Controls -->
+              <div class="sim-controls-panel">
+                <div>
+                  <label style="font-size: 0.8125rem; font-weight: 600; display: block; margin-bottom: 0.5rem;">
+                    Atmospheric Lapse Rate Mode:
+                  </label>
+                  <div class="sim-mode-toggle">
+                    <button id="simInversionModeBtn" class="sim-mode-btn active">Thermal Inversion</button>
+                    <button id="simNormalModeBtn" class="sim-mode-btn">Normal Dispersion</button>
+                  </div>
+                </div>
+
+                <div class="slider-container">
+                  <div class="slider-label-row">
+                    <span style="font-size: 0.8125rem; font-weight: 500;">Urban / Industrial Emission Rate:</span>
+                  </div>
+                  <input type="range" id="simEmissionSlider" class="slider-input" min="1" max="6" step="1" value="3" aria-label="Emission rate slider" />
+                </div>
+
+                <div class="slider-container">
+                  <div class="slider-label-row">
+                    <span style="font-size: 0.8125rem; font-weight: 500;">Surface Wind Velocity (m/s):</span>
+                  </div>
+                  <input type="range" id="simWindSlider" class="slider-input" min="0" max="4" step="0.2" value="1.0" aria-label="Wind velocity slider" />
+                </div>
+
+                <button id="simPlayPauseBtn" class="btn-secondary" style="justify-content: center;">
+                  Pause Simulation
+                </button>
+
+                <div class="sim-notes-card">
+                  <strong style="color: var(--text-primary); display: block; margin-bottom: 0.25rem;">Real-World Case Study:</strong>
+                  Metropolitan valleys like Santiago, Salt Lake City, and the Indo-Gangetic Plain suffer multi-week acute pollution crises because mountain ranges block horizontal advection while inversions prohibit vertical mixing.
+                </div>
+
+                <div style="border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-hairline);">
+                  <img 
+                    src="/src/assets/images/thermal_inversion_1790776076580.jpg" 
+                    alt="Valley inversion smog boundary layer trapped below mountain peak" 
+                    style="width: 100%; height: 110px; object-fit: cover; display: block;"
+                    referrerpolicy="no-referrer"
+                  />
+                  <div style="padding: 0.5rem 0.75rem; font-size: 0.7rem; font-family: var(--font-mono); color: var(--text-muted); background-color: var(--bg-surface-subtle);">
+                    Observational photograph: Flat particulate boundary layer trapped beneath clear atmosphere
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="hairline-divider" />
+
+      <!-- MODULE 5: Human Biological Vulnerability & Anatomical Pathways -->
+      <section id="health-impact" class="section-padding">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">Clinical Epidemiology</div>
+            <h2 class="section-title">Human Anatomical Exposure Pathways</h2>
+            <p class="section-desc">
+              Particulate matter does not remain confined to the respiratory tract. Examine organ-specific pathological cascades induced by chronic particulate exposure.
+            </p>
+          </div>
+
+          <div class="anatomy-grid">
+            <!-- Left: Organ selector list -->
+            <div class="organ-system-nav" id="anatomyNavContainer">
+              <!-- Dynamically populated by script.js -->
+            </div>
+
+            <!-- Right: Dynamic organ detail display -->
+            <div class="organ-detail-view">
+              <h3 id="anatomyDetailTitle">Pulmonary & Terminal Alveoli</h3>
+              <p class="mechanism-lead" id="anatomyDetailLead">
+                Inhaled PM2.5 and Ozone bypass upper respiratory defenses and settle into the alveolar sacs where oxygen exchange occurs. Macrophages engulf particles but cannot digest elemental carbon, resulting in chronic oxidative stress and cell apoptosis.
+              </p>
+
+              <div style="margin-bottom: 1rem; font-weight: 600; font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted);">
+                Documented Clinical Outcomes:
+              </div>
+              <ul class="pathology-list" id="anatomyPathologyList">
+                <!-- Injected via script.js -->
+              </ul>
+
+              <div style="border-top: 1px solid var(--border-hairline); padding-top: 1rem; font-size: 0.75rem; color: var(--text-muted);">
+                <strong style="color: var(--text-primary);">Serum & Molecular Biomarkers:</strong>
+                <span id="anatomyBiomarkers">Elevated exhaled nitric oxide (FeNO), surfactant protein D leakage.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="hairline-divider" />
+
+      <!-- MODULE 6: Solutions & Policy Action Blueprint -->
+      <section id="action-matrix" class="section-padding">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">Evidence-Based Interventions</div>
+            <h2 class="section-title">Clean Air Defense & Systemic Decarbonization</h2>
+            <p class="section-desc">
+              Addressing air pollution requires simultaneous individual harm reduction, municipal infrastructure redesign, and nationwide energy transition.
+            </p>
+          </div>
+
+          <!-- Progress Counter -->
+          <div style="margin-bottom: 2rem; display: flex; align-items: center; justify-content: space-between; background-color: var(--bg-surface); border: 1px solid var(--border-hairline); border-radius: var(--radius-md); padding: 1rem 1.5rem;">
+            <div>
+              <span style="font-weight: 600; font-size: 0.9375rem;">Interactive Action Blueprint Checklist</span>
+              <span style="display: block; font-size: 0.75rem; color: var(--text-muted);">Track practical personal and municipal clean-air protocols</span>
+            </div>
+            <div style="font-family: var(--font-mono); font-size: 0.875rem; color: var(--text-primary);">
+              Adopted: <strong id="actionsCompletedCount" class="tabular-nums" style="color: var(--accent-primary);">0</strong> / <span id="actionsTotalCount" class="tabular-nums">9</span>
+            </div>
+          </div>
+
+          <div class="solutions-grid">
+            <!-- Column 1: Individual & Household -->
+            <div class="solution-column">
+              <h3 class="solution-col-title">Personal & Indoor Air Defense</h3>
+              <p class="solution-col-desc">Immediate actions to protect personal respiratory tracts from ambient smog.</p>
+              <div class="solution-items-list">
+                <label class="solution-item-check">
+                  <input type="checkbox" />
+                  <span>Deploy True HEPA (H13/H14) mechanical air purifiers in sleeping quarters</span>
+                </label>
+                <label class="solution-item-check">
+                  <input type="checkbox" />
+                  <span>Wear NIOSH-approved N95 or FFP2 respirators during AQI &gt; 150 spikes</span>
+                </label>
+                <label class="solution-item-check">
+                  <input type="checkbox" />
+                  <span>Transition domestic gas ranges to electric induction to eliminate indoor NO2</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Column 2: Urban & Mobility -->
+            <div class="solution-column">
+              <h3 class="solution-col-title">Urban Design & Mobility</h3>
+              <p class="solution-col-desc">Metropolitan re-engineering to suppress vehicle tailpipe and tire wear emissions.</p>
+              <div class="solution-items-list">
+                <label class="solution-item-check">
+                  <input type="checkbox" />
+                  <span>Enforce Low-Emission Zones (LEZ) and ultra-low emission congestion fees</span>
+                </label>
+                <label class="solution-item-check">
+                  <input type="checkbox" />
+                  <span>Rapid electrification of municipal public transit fleets and municipal school buses</span>
+                </label>
+                <label class="solution-item-check">
+                  <input type="checkbox" />
+                  <span>Plant tiered urban tree canopies to capture suspended coarse particulate PM10</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Column 3: Industrial & Energy Policy -->
+            <div class="solution-column">
+              <h3 class="solution-col-title">Industrial & Power Transition</h3>
+              <p class="solution-col-desc">Macroeconomic phaseout of point-source combustion and coal burning.</p>
+              <div class="solution-items-list">
+                <label class="solution-item-check">
+                  <input type="checkbox" />
+                  <span>Accelerate decommissioning of coal-fired thermal electricity generation</span>
+                </label>
+                <label class="solution-item-check">
+                  <input type="checkbox" />
+                  <span>Mandate flue gas desulfurization (FGD scrubbers) on smelting and cement kilns</span>
+                </label>
+                <label class="solution-item-check">
+                  <input type="checkbox" />
+                  <span>Subsidize mechanized agricultural seeding to eliminate open crop residue burning</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Clean Urban Architecture Spotlight -->
+          <div style="margin-top: 2rem; background-color: var(--bg-surface); border: 1px solid var(--border-hairline); border-radius: var(--radius-lg); padding: 1.5rem; display: grid; grid-template-columns: 200px 1fr; gap: 1.5rem; align-items: center;">
+            <img 
+              src="/src/assets/images/clean_urban_canopy_1790776088804.jpg" 
+              alt="Sustainable clean-air city street with electric transit and urban tree canopy" 
+              style="width: 100%; height: 130px; object-fit: cover; border-radius: var(--radius-md); border: 1px solid var(--border-hairline);"
+              referrerpolicy="no-referrer"
+            />
+            <div>
+              <span style="font-size: 0.75rem; font-family: var(--font-mono); text-transform: uppercase; color: var(--accent-primary);">Proven Case: The London Ultra Low Emission Zone (ULEZ)</span>
+              <h4 style="font-size: 1.1rem; margin: 0.25rem 0;">Measurable Atmospheric Restoration</h4>
+              <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.5;">
+                Peer-reviewed epidemiological tracking in London demonstrated a 46% reduction in roadside nitrogen dioxide (NO2) concentrations within central monitoring zones following aggressive vehicular emissions pricing and rapid transit electrification.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Modal Dialog: Criteria Pollutant Deep Dive -->
+    <div class="modal-backdrop" id="pollutantModal" role="dialog" aria-modal="true" aria-labelledby="modalPollutantName">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div>
+            <span class="pollutant-symbol" id="modalPollutantSymbol" style="font-size: 1.5rem;">PM2.5</span>
+            <h2 id="modalPollutantName" style="font-size: 1.25rem; font-weight: 600; margin-top: 0.25rem;">Fine Particulate Matter</h2>
+          </div>
+          <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close dialog">&times;</button>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+          <div>
+            <div style="font-size: 0.75rem; font-family: var(--font-mono); text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.25rem;">Overview & Chemical Morphology</div>
+            <p id="modalPollutantDesc" style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.5;"></p>
+          </div>
+
+          <div>
+            <div style="font-size: 0.75rem; font-family: var(--font-mono); text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.25rem;">Anthropogenic & Natural Sources</div>
+            <p id="modalPollutantSources" style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.5;"></p>
+          </div>
+
+          <div style="background-color: var(--bg-surface-subtle); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-hairline);">
+            <div style="font-size: 0.75rem; font-family: var(--font-mono); text-transform: uppercase; color: var(--accent-primary); margin-bottom: 0.25rem;">WHO Air Quality Guideline Thresholds</div>
+            <div id="modalPollutantGuideline" class="tabular-nums" style="font-size: 0.9375rem; font-weight: 600; color: var(--text-primary);"></div>
+          </div>
+
+          <div>
+            <div style="font-size: 0.75rem; font-family: var(--font-mono); text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.25rem;">Target Organ Systems & Pathophysiology</div>
+            <p id="modalPollutantHealth" style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.5;"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Institutional Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-brand">
+              <span class="brand-dot"></span>
+              AETHER · AIR QUALITY OBSERVATORY
+            </div>
+            <p class="footer-bio">
+              An open, public-interest scientific index translating global atmospheric chemistry, particulate physics, and clinical epidemiology into accessible environmental intelligence.
+            </p>
+          </div>
+
+          <div>
+            <div class="footer-col-title">Primary Scientific References</div>
+            <ul class="footer-nav-list">
+              <li><a href="https://www.who.int/publications/i/item/9789240034228" target="_blank" rel="noopener noreferrer">WHO Global Air Quality Guidelines (2021)</a></li>
+              <li><a href="https://www.stateofglobalair.org" target="_blank" rel="noopener noreferrer">State of Global Air Report (HEI)</a></li>
+              <li><a href="https://www.epa.gov/criteria-air-pollutants" target="_blank" rel="noopener noreferrer">US EPA NAAQS Criteria Pollutants</a></li>
+              <li><a href="https://berkeleyearth.org/air-pollution-and-cigarette-equivalence/" target="_blank" rel="noopener noreferrer">Berkeley Earth Air-Cigarette Model</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="footer-col-title">Navigation Index</div>
+            <ul class="footer-nav-list">
+              <li><a href="#aqi-calculator">AQI Exposure Calculator</a></li>
+              <li><a href="#particle-scale">Particle Size Spectrum</a></li>
+              <li><a href="#pollutants">Six Criteria Pollutants</a></li>
+              <li><a href="#inversion-sim">Thermal Inversion Simulation</a></li>
+              <li><a href="#health-impact">Anatomical Vulnerability</a></li>
+              <li><a href="#action-matrix">Action Blueprint</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom-bar">
+          <div>
+            Aether Atmospheric Observatory · Built for empirical clarity & public health education.
+          </div>
+          <div>
+            WHO Guideline Benchmark: 5 µg/m³ PM2.5 annual mean
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Vanilla Client Logic -->
+    <script type="module" src="/script.js"></script>
+  </body>
+</html>
